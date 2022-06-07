@@ -1,0 +1,378 @@
+/* 
+-----CSS Map------
+|   -General     |
+|   -Header      |
+|   -TypeIntro   |
+|   -Logo        |
+|   -Gallery/    |
+|    Games       |
+|   -Cards       |
+|   -Footer      |
+------------------
+*/
+
+
+
+/*-----general start-----*/
+
+*{box-sizing: border-box;}
+
+:root{
+    --primColor: #eaeae8;
+    --typeSpeed: 3s;
+    --typeCount: 18;
+}
+
+@import url('https://fonts.gstatic.com');
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--primColor);
+}
+
+html,
+body{
+    /* fixed mobile issue with right side having blank space */
+    overflow-x: hidden;
+}
+
+.text{
+    font-size: 1.8rem;
+}
+
+/*-----general end-----*/
+
+/*-----Header start-----*/
+
+.nav-link-header{
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.nav-link-text,
+.nav-link-icon{
+    font-size: 2.5rem;
+}
+
+.nav-link-icon{
+    margin-left: 1rem;
+    text-align: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.gitHub{
+    color: #171515 !important;
+}
+.twitter{
+    color: #1DA1F2 !important;
+}
+.linkedIn{
+    color: #0e76a8 !important;
+}
+
+.gitHub:hover{
+    background-color: #171515;
+    color: white !important;
+}
+.twitter:hover{
+    background-color: #1DA1F2;
+    color: white !important;
+}
+.linkedIn:hover{
+    background-color: #0e76a8;
+    color: white !important;
+}
+
+/*-----Header end-----*/
+
+/*-----TypeIntro start-----*/
+
+/*
+    CSS from animation tutorial on YouTube by Kevin Powell
+    link in the next line:
+    https://www.youtube.com/watch?v=w1nhwUGsG6M 
+*/
+
+.typeContainer{
+    position: relative;
+    height: 20rem;
+}
+
+.typeBody{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.typeHeader{
+    font-size: 8.2rem;
+    position: relative;
+    width: max-content;
+}
+
+.typeHeader::before,
+.typeHeader::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.typeHeader::before{
+    background: var(--primColor);
+    animation: 
+        typewriter var(--typeSpeed) 1s steps(var(--typeCount)) forwards;
+}
+
+.typeHeader::after{
+    width: .125em;
+    background-color: black;
+    animation: 
+        typewriter var(--typeSpeed) 1s steps(var(--typeCount)) forwards,
+        blink 750ms steps(28) infinite;
+}
+
+.subtitle{
+    text-align: center;
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 4rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeIn 2s ease calc(var(--typeSpeed) + 1.4s) forwards;
+}
+
+@keyframes typewriter{
+    to {left: 100%;}
+}
+
+@keyframes blink{
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translate(0, 0)
+    }
+}
+
+@media (max-width: 830px){
+    .typeHeader{
+        font-size: 6.6rem;
+    }
+}
+@media (max-width: 660px){
+    .typeContainer{
+        height: 18rem;
+    }
+    .typeHeader{
+        font-size: 4.8rem;
+    }
+    .subtitle{
+        font-size: 3.2rem;
+    }
+}
+@media (max-width: 490px){
+    .typeContainer{
+        height: 12rem;
+    }
+    .typeHeader{
+        font-size: 3.2rem;
+    }
+    .subtitle{
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 340px){
+    .typeContainer{
+        height: 10rem;
+    }
+    .typeHeader{
+        font-size: 2.5rem;
+    }
+    .subtitle{
+        font-size: 1.8rem;
+    }
+}
+
+/*-----TypeIntro end-----*/
+
+/*-----Logo Start-----*/
+
+.logo-body{
+    text-align: center;
+    opacity: 0;
+    transform: translateX(8rem);
+    /* animation fadeIn is in TypeIntro */
+    animation: fadeIn 2s ease calc(var(--typeSpeed) + 1.5s) forwards;
+    margin-bottom: 3rem;
+}
+
+/*-----Logo end-----*/
+
+/*-----About start-----*/
+
+.image-me{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.secondary-header{
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+.text a,
+.certificate a{
+    text-decoration: none;
+}
+
+.certificate{
+    font-size: 1.8rem;
+}
+
+/*-----About end-----*/
+
+/*-----Gallery && Games start-----*/
+
+.projects-header{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/*-----Gallery && Games end-----*/
+
+/*-----Cards start-----*/
+
+.card-title{
+    margin-top: 1.5rem;
+}
+
+.card-card{
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.site-link,
+.code-link{
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    z-index: 3;
+}
+
+@media (hover: hover){
+    .card-card{
+        background: gray;
+    }
+
+    .site-link,
+    .code-link{
+        top: 40%;
+        background-color: white;
+        font-size: 3rem;
+        border: 1px solid #000;
+        padding: 0.5em 1em;
+        opacity: 0;
+    }
+
+    .site-link:hover,
+    .code-link:hover{
+        border: none;
+        box-shadow: .25em .25em 1em;
+    }
+
+    .site-link:hover{
+        color: blue;
+    }
+    .code-link:hover{
+        color: red;
+    }
+
+    .site-link{
+        left: 10%;
+        transform: translateX(-4rem);
+    }
+    .code-link{
+        right: 10%;
+        transform: translateX(4rem);
+    }
+
+    .card-card:hover .project-img{
+        opacity: 0.6;
+    }
+
+    .card-card:hover .site-link,
+    .card-card:hover .code-link{
+        /* animation fadeIn is in TypeIntro */
+        animation: fadeIn 1.5s ease forwards;
+    }
+}
+
+@media (hover: none){
+
+    .project-img{
+        margin-bottom: 1rem;
+    }
+
+    .site-link,
+    .code-link{
+        font-size: 1.6rem;
+        background-color: var(--primColor);
+        border-radius: 8%;
+        padding: 0.4em 1em;
+        bottom: 10%;
+        box-shadow: .25em .25em 1em;
+    }
+
+    .site-link{
+        color: blue;
+        left: 5%;
+    }
+
+    .code-link{
+        color: red;
+        right: 5%;
+    }
+}
+
+/*-----Cards end-----*/
+
+/*-----Footer start-----*/
+
+footer{
+    border-top: 0.2rem solid #d2d2d2cd;
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+    font-size: 1.4rem;
+    background-color: #e8e8ea;
+}
+
+footer .container .row .col-4 .nav-link{
+    margin: auto;
+}
+
+.colophon-text{
+    text-align: end;
+}
+
+@media (max-width: 991px){
+    .colophon-text{
+        text-align: center;
+    }
+}
+
+/*-----Footer end-----*/
