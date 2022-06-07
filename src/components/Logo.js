@@ -5,7 +5,7 @@ const Logo =()=>{
         <>
         <main className='container'>
             <div className='logo-body'>
-                <img className='img-fluid logo' src='/media/logoMain.png' alt='logo' />
+                <img className='img-fluid logo' src='./media/logoMain.png' alt='logo' />
             </div>
         </main>
         </>

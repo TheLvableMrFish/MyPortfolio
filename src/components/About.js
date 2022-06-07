@@ -6,7 +6,7 @@ const About =()=>{
         <main className='container' id="about">
             <div className='row'>
                 <div className='col-xl-6 image-me'>
-                    <img className='img-fluid' src='/media/image-me.jpg' alt='me'/>
+                    <img className='img-fluid' src='./media/image-me.jpg' alt='me'/>
                 </div>
                 <div className='col-xl-6 details'>
                     <h2 className='secondary-header'>&#60;About Me&#8725;&#62;</h2>

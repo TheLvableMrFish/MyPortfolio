@@ -6,7 +6,7 @@ const Cards =(props)=>{
         <div key={el.id} className='col-lg-4'>
             <h2 className='card-title'>{el.title}</h2>
             <div className='card-card'>
-                <img className='img-fluid w-100 project-img' src={`/dbMedia${el.img}`} alt={el.title} />
+                <img className='img-fluid w-100 project-img' src={`./dbMedia${el.img}`} alt={el.title} />
                 {el.link === '#' ? null :
                     <a className='site-link' target='_blank' href={`${el.link}`}> Site </a>
                 }
