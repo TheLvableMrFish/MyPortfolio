@@ -28,7 +28,14 @@ export default [
         code: 'https://github.com/TheLvableMrFish/gameon'
     },
     {
-        id: 4,
+        id: 5,
+        title: 'Uncles Painting Site',
+        img: '/proj5.png',
+        link: 'https://thelvablemrfish.github.io/company/',
+        code: 'https://github.com/TheLvableMrFish/company'
+    },
+    {
+        id: 5,
         title: 'More Coming Soon.',
         img: '/comingSoon.jpg',
         link: '#',
