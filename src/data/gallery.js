@@ -3,8 +3,8 @@ export default [
         id: 1,
         title: 'Bloom Landing Page',
         img: '/proj1.png',
-        link: 'https://thelvablemrfish.github.io/Bloom/',
-        code: 'https://github.com/TheLvableMrFish/Bloom'
+        link: 'https://thelvablemrfish.github.io/Bloom-w-bootstrap/',
+        code: 'https://github.com/TheLvableMrFish/Bloom-w-bootstrap'
     },
     {
         id: 2,
